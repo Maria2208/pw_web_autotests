@@ -14,12 +14,12 @@ def test_login():
         password.send_keys("test123")
         button = browser.find_element(By.CSS_SELECTOR, "button.ui-black")
         button.click()
-        all_deals_header = browser.find_element(By.CSS_SELECTOR, "a.all-deals-link span")
-        assert "Все сделки" in all_deals_header.text
+        #all_deals_header = browser.find_element(By.CSS_SELECTOR, "a.all-deals-link span")
+        time.sleep(5)
+        url_opinfo = browser.current_url
 
+        assert url_opinfo == "https://market.proleum.pro/opinfo"
 
     finally:
-        # ожидание чтобы визуально оценить результаты прохождения скрипта
-        time.sleep(10)
-        # закрываем браузер после всех манипуляций
+        #time.sleep(5)
         browser.quit()

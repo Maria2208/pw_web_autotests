@@ -2,6 +2,7 @@ from selenium import webdriver
 import time
 from selenium.webdriver.common.by import By
 
+
 def test_length_of_menu():
     try:
         link = "https://market.proleum.pro/auth/by-login"
@@ -14,13 +15,10 @@ def test_length_of_menu():
         password.send_keys("test123")
         button = browser.find_element(By.CSS_SELECTOR, "button.ui-black")
         button.click()
-        links_in_the_sidebar = browser.find_elements_by_css_selector('[routerlinkactive="menu__item__active"]')
+        links_in_the_sidebar = browser.find_elements(By.CSS_SELECTOR, '[routerlinkactive="menu__item__active"]')
 
         assert len(links_in_the_sidebar) == 4
 
-
     finally:
-        # ожидание чтобы визуально оценить результаты прохождения скрипта
-        time.sleep(10)
-        # закрываем браузер после всех манипуляций
+        #time.sleep(5)
         browser.quit()
