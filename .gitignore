@@ -1,0 +1,8 @@
+*.pytest-cache
+*.DS_Store
+*.idea
+/env/
+/fixtures_parametrization/*
+/fixtures/*
+/web/tests/check_the_number_of_side_menu_items.py
+web/utils/*
