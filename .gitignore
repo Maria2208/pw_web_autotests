@@ -6,3 +6,4 @@
 /fixtures/*
 /web/tests/check_the_number_of_side_menu_items.py
 web/utils/*
+config.py
